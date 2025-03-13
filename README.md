@@ -70,14 +70,14 @@ Total Sales by Payment Method
 ![alt text](IMAGES/Total_Sales_by_Payment_Method.png)
 
 
-## 📈 Power BI Dashboards
-1️⃣ Sales Performance Dashboard
-📌 KPIs:
+# 📈 Power BI Dashboards
+## 1️⃣ Sales Performance Dashboard
+### 📌 KPIs:
 ✔️ Total Revenue → SUM(fact_sales.amount)
 ✔️ Total Orders → COUNT(fact_sales.orderid)
 ✔️ Average Order Value → SUM(fact_sales.amount) / COUNT(fact_sales.orderid)
 
-## 📌 Charts:
+📌 Charts:
 ### 📊 Sales by Category → Bar Chart (category, SUM(amount))
 🌍 Sales by Region → Map (ship_city, SUM(amount))
 📉 Sales Trend Over Time → Line Chart (date, SUM(amount))
@@ -86,7 +86,7 @@ Total Sales by Payment Method
 ### 📌 KPIs:
 ✔️ Total Customers → COUNT(DISTINCT dim_users.user_id)
 
-📌 Charts:
+### 📌 Charts:
 💳 Preferred Payment Methods → Pie Chart (payment_method, SUM(final_price))
 
 ## 3️⃣ Product & Reviews Dashboard
