@@ -39,7 +39,7 @@ Total Sales by Payment Method
 ⚡ Installation & Usage
 Clone the repository:
 
-git clone https://github.com/your-username/ecommerce-datawarehouse.git
+git clone https://github.com/utkarshgupta28/ecommerce-datawarehouse.git
 
 Set up the database in MySQL:
 
