@@ -1,65 +1,51 @@
 # E-commerce Data Warehouse
 
-📌 Project Overview
-This project implements a Kimball-style Data Warehouse for an E-commerce Platform using MySQL. It includes staging tables, dimension tables, and fact tables to store and analyze sales, reviews, and transaction data.
+**📌 Project Overview**
+The E-commerce Data Warehouse project is designed to optimize sales analysis, customer insights, and product performance tracking. It follows Kimball's Star Schema methodology to structure data efficiently for reporting and analytics. The project integrates Snowflake as the cloud data warehouse and Power BI for visualization, providing actionable insights into business performance.
 
-**TECHNOLOGIES**
+**🚀 Technologies Used**
+Database & Data Warehousing: Snowflake, MySQL
+ETL (Extract, Transform, Load): SQL (Snowflake SQL), Data Cleaning, Transformation
+Business Intelligence & Visualization: Power BI, DAX (Data Analysis Expressions)
+Version Control & Documentation: GitHub, Markdown (README.md)
+Data Modeling: Kimball's Star Schema, ERD (Entity-Relationship Diagram)
+Performance Optimization: SQL Joins
 
-🗄️ Database & Data Warehousing 
-MySQL → Used for creating and managing the staging, dimension, and fact tables in the data warehouse.  
-Kimball's Data Warehouse Methodology → Implemented a star schema for efficient querying and reporting.  
-
-🔄 ETL (Extract, Transform, Load)  
-SQL Queries → Used for data extraction, transformation, and loading (ETL) into the data warehouse.  
-Data Cleaning & Preprocessing → Handled NULL values, data type conversions, and deduplication.  
-
-📊 Business Intelligence & Data Visualization
-Power BI → Designed interactive dashboards to analyze sales performance, customer behavior, and product reviews.  
-DAX (Data Analysis Expressions) → Used in Power BI for KPI calculations and filtering data.  
-
-📂 Version Control & Documentation
-GitHub → Used for version control and project management.  
-Markdown (README.md) → Documented project details, including ERD, SQL scripts, and Power BI dashboards.  
-
-⚙️ Other Technologies & Concepts
-Entity-Relationship Diagram (ERD) → Visualized data relationships.  
-Data Modeling (Star Schema) → Structured data efficiently for reporting.  
-SQL Joins & Indexing → Optimized query performance.  
 
 **PROCESS**
 
 📂 Database Structure
 The database consists of two schemas:
-raw_data → Contains staging tables for raw input data.
-transformed_data → Stores cleaned and structured data for analytics.
+• raw_data → Contains staging tables for raw input data.
+• transformed_data → Stores cleaned and structured data for analytics.
 
 📌 Staging Tables (raw_data)
-staging_ecomm → Stores raw e-commerce transactions.
-staging_reviews → Stores raw product review data.
-staging_sales → Stores raw sales transaction data.
+• staging_ecomm → Stores raw e-commerce transactions.
+• staging_reviews → Stores raw product review data.
+• staging_sales → Stores raw sales transaction data.
 
 ![alt text](staging_tables.png)
 
 📌 Dimension Tables (transformed_data)
-dim_users → Stores unique users.
-dim_products → Stores unique products.
-dim_payment_methods → Stores payment methods.
-dim_sales_channel → Stores sales channels.
-dim_fulfillment → Stores fulfillment types.
+• dim_users → Stores unique users.
+• dim_products → Stores unique products.
+• dim_payment_methods → Stores payment methods.
+• dim_sales_channel → Stores sales channels.
+• dim_fulfillment → Stores fulfillment types.
 
 ![alt text](dim_tables.png)
 
 📌 Fact Tables (transformed_data)
-fact_ecomm_sales → Stores processed e-commerce sales data.
-fact_sales → Stores detailed transactional sales data.
-fact_reviews → Stores product review data for analysis.
+• fact_ecomm_sales → Stores processed e-commerce sales data.
+• fact_sales → Stores detailed transactional sales data.
+• fact_reviews → Stores product review data for analysis.
 
 ![alt text](fact_tables.png)
 
 🔄 ETL Process
-Extract raw data into staging tables.
-Transform data using SQL queries (cleaning, deduplication, key mapping).
-Load transformed data into dimension and fact tables.
+• Extract raw data into staging tables.
+• Transform data using SQL queries (cleaning, deduplication, key mapping).
+• Load transformed data into dimension and fact tables.
 
 Null values
 ![alt text](null_values.png)
