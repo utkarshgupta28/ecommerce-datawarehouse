@@ -14,19 +14,19 @@ The E-commerce Data Warehouse project is designed to optimize sales analysis, cu
 
 ## **PROCESS**
 
-## 📂 Database Structure
+> 📂 Database Structure
 The database consists of two schemas:
 * raw_data → Contains staging tables for raw input data.
 * transformed_data → Stores cleaned and structured data for analytics.
 
-## 📌 Staging Tables (raw_data)
+> 📌 Staging Tables (raw_data)
 * staging_ecomm → Stores raw e-commerce transactions.
 * staging_reviews → Stores raw product review data.
 * staging_sales → Stores raw sales transaction data.
 
 ![alt text](IMAGES/staging_tables.png)
 
-## 📌 Dimension Tables (transformed_data)
+> 📌 Dimension Tables (transformed_data)
 * dim_users → Stores unique users.
 * dim_products → Stores unique products.
 * dim_payment_methods → Stores payment methods.
@@ -35,14 +35,14 @@ The database consists of two schemas:
 
 ![alt text](IMAGES/dim_tables.png)
 
-## 📌 Fact Tables (transformed_data)
+> 📌 Fact Tables (transformed_data)
 * fact_ecomm_sales → Stores processed e-commerce sales data.
 * fact_sales → Stores detailed transactional sales data.
 * fact_reviews → Stores product review data for analysis.
 
 ![alt text](IMAGES/fact_tables.png)
 
-## 🔄 ETL Process
+> 🔄 ETL Process
 * Extract raw data into staging tables.
 * Transform data using SQL queries (cleaning, deduplication, key mapping).
 * Load transformed data into dimension and fact tables.
@@ -59,7 +59,7 @@ SELECT * FROM transformed_data.fact_sales LIMIT 10;
 SELECT * FROM transformed_data.fact_reviews LIMIT 10;
 ![alt text](IMAGES/fact_reviews_TD.png)
 
-## 📊 Analytical Queries
+> 📊 Analytical Queries
 * Total Sales Per Category
 ![alt text](IMAGES/total_sales_per_category.png)
 
@@ -71,39 +71,39 @@ SELECT * FROM transformed_data.fact_reviews LIMIT 10;
 
 
 # 📈 Power BI Dashboards
-## 1️⃣ Sales Performance Dashboard
+> 1️⃣ Sales Performance Dashboard
 📌 KPIs:
-✔️ Total Revenue → SUM(fact_sales.amount)
-✔️ Total Orders → COUNT(fact_sales.orderid)
-✔️ Average Order Value → SUM(fact_sales.amount) / COUNT(fact_sales.orderid)
+- ✔️ Total Revenue → SUM(fact_sales.amount)
+- ✔️ Total Orders → COUNT(fact_sales.orderid)
+- ✔️ Average Order Value → SUM(fact_sales.amount) / COUNT(fact_sales.orderid)
 
 📌 Charts:
-📊 Sales by Category → Bar Chart (category, SUM(amount))
-🌍 Sales by Region → Map (ship_city, SUM(amount))
-📉 Sales Trend Over Time → Line Chart (date, SUM(amount))
+- 📊 Sales by Category → Bar Chart (category, SUM(amount))
+- 🌍 Sales by Region → Map (ship_city, SUM(amount))
+- 📉 Sales Trend Over Time → Line Chart (date, SUM(amount))
 
-## 2️⃣ Customer Analytics Dashboard
+> 2️⃣ Customer Analytics Dashboard
 📌 KPIs:
-✔️ Total Customers → COUNT(DISTINCT dim_users.user_id)
+- ✔️ Total Customers → COUNT(DISTINCT dim_users.user_id)
 
 📌 Charts:
-💳 Preferred Payment Methods → Pie Chart (payment_method, SUM(final_price))
+- 💳 Preferred Payment Methods → Pie Chart (payment_method, SUM(final_price))
 
-## 3️⃣ Product & Reviews Dashboard
+> 3️⃣ Product & Reviews Dashboard
 📌 KPIs:
-✔️ Total Products Sold → COUNT(fact_ecomm_sales.product_key)
-✔️ Average Product Rating → AVG(fact_reviews.score)
+- ✔️ Total Products Sold → COUNT(fact_ecomm_sales.product_key)
+- ✔️ Average Product Rating → AVG(fact_reviews.score)
 
 ![alt text](IMAGES/dashboard_powerbi.png)
 
 ⚡ Installation & Usage
 Clone the repository:
 
-git clone https://github.com/utkarshgupta28/ecommerce-datawarehouse.git
+[git clone](https://github.com/utkarshgupta28/ecommerce-datawarehouse.git)
 
 Set up the database in MySQL:
 
-CREATE DATABASE ecommerce_dw;
+'CREATE DATABASE ecommerce_dw;'
 
 Run the provided SQL scripts to create schemas, tables, and load data.
 
