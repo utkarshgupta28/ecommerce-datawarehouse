@@ -3,6 +3,31 @@
 📌 Project Overview
 This project implements a Kimball-style Data Warehouse for an E-commerce Platform using MySQL. It includes staging tables, dimension tables, and fact tables to store and analyze sales, reviews, and transaction data.
 
+**TECHNOLOGIES**
+
+🗄️ Database & Data Warehousing 
+MySQL → Used for creating and managing the staging, dimension, and fact tables in the data warehouse.  
+Kimball's Data Warehouse Methodology → Implemented a star schema for efficient querying and reporting.  
+
+🔄 ETL (Extract, Transform, Load)  
+SQL Queries → Used for data extraction, transformation, and loading (ETL) into the data warehouse.  
+Data Cleaning & Preprocessing → Handled NULL values, data type conversions, and deduplication.  
+
+📊 Business Intelligence & Data Visualization
+Power BI → Designed interactive dashboards to analyze sales performance, customer behavior, and product reviews.  
+DAX (Data Analysis Expressions) → Used in Power BI for KPI calculations and filtering data.  
+
+📂 Version Control & Documentation
+GitHub → Used for version control and project management.  
+Markdown (README.md) → Documented project details, including ERD, SQL scripts, and Power BI dashboards.  
+
+⚙️ Other Technologies & Concepts
+Entity-Relationship Diagram (ERD) → Visualized data relationships.  
+Data Modeling (Star Schema) → Structured data efficiently for reporting.  
+SQL Joins & Indexing → Optimized query performance.  
+
+**PROCESS**
+
 📂 Database Structure
 The database consists of two schemas:
 raw_data → Contains staging tables for raw input data.
