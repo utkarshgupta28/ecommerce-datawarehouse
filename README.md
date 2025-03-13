@@ -13,7 +13,7 @@ staging_ecomm → Stores raw e-commerce transactions.
 staging_reviews → Stores raw product review data.
 staging_sales → Stores raw sales transaction data.
 
-![alt text](image-4.png)
+![alt text](staging_tables.png)
 
 📌 Dimension Tables (transformed_data)
 dim_users → Stores unique users.
@@ -22,14 +22,14 @@ dim_payment_methods → Stores payment methods.
 dim_sales_channel → Stores sales channels.
 dim_fulfillment → Stores fulfillment types.
 
-![alt text](image-2.png)
+![alt text](dim_tables.png)
 
 📌 Fact Tables (transformed_data)
 fact_ecomm_sales → Stores processed e-commerce sales data.
 fact_sales → Stores detailed transactional sales data.
 fact_reviews → Stores product review data for analysis.
 
-![alt text](image-3.png)
+![alt text](fact_tables.png)
 
 🔄 ETL Process
 Extract raw data into staging tables.
@@ -37,26 +37,26 @@ Transform data using SQL queries (cleaning, deduplication, key mapping).
 Load transformed data into dimension and fact tables.
 
 Null values
-![alt text](image-5.png)
+![alt text](null_values.png)
 
 SELECT * FROM transformed_data.fact_ecomm_sales LIMIT 10;
-![alt text](image-6.png)
+![alt text](fact_ecomm_TD.png)
 
 SELECT * FROM transformed_data.fact_sales LIMIT 10;
-![alt text](image-7.png)
+![alt text](fact_sales_TD.png)
 
 SELECT * FROM transformed_data.fact_reviews LIMIT 10;
-![alt text](image-8.png)
+![alt text](fact_reviews_TD.png)
 
 📊 Analytical Queries
 Total Sales Per Category
-![alt text](image-10.png)
+![alt text](total_sales_per_category.png)
 
 Average Review Score Per Product
-![alt text](image-9.png)
+![alt text](Average_Review_Score_Per_Product.png)
 
 Total Sales by Payment Method
-![alt text](image-11.png)
+![alt text](Total_Sales_by_Payment_Method.png)
 
 
 📈 Power BI Dashboards
@@ -83,7 +83,7 @@ Total Sales by Payment Method
 ✔️ Total Products Sold → COUNT(fact_ecomm_sales.product_key)
 ✔️ Average Product Rating → AVG(fact_reviews.score)
 
-![alt text](image-1.png)
+![alt text](dashboard_powerbi.png)
 
 ⚡ Installation & Usage
 Clone the repository:
@@ -98,4 +98,4 @@ Run the provided SQL scripts to create schemas, tables, and load data.
 
 📜 ERD (Entity Relationship Diagram)
 
-![alt text](image.png)
+![alt text](ERD.png)
