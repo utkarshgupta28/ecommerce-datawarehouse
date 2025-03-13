@@ -15,6 +15,7 @@ The E-commerce Data Warehouse project is designed to optimize sales analysis, cu
 ## **PROCESS**
 
 📂 Database Structure
+
 The database consists of two schemas:
 * raw_data → Contains staging tables for raw input data.
 * transformed_data → Stores cleaned and structured data for analytics.
@@ -72,6 +73,7 @@ SELECT * FROM transformed_data.fact_reviews LIMIT 10;
 
 📈 Power BI Dashboards
 1️⃣ Sales Performance Dashboard
+
 📌 KPIs:
 - Total Revenue → SUM(fact_sales.amount)
 - Total Orders → COUNT(fact_sales.orderid)
@@ -83,6 +85,7 @@ SELECT * FROM transformed_data.fact_reviews LIMIT 10;
 - Sales Trend Over Time → Line Chart (date, SUM(amount))
 
 2️⃣ Customer Analytics Dashboard
+
 📌 KPIs:
 - Total Customers → COUNT(DISTINCT dim_users.user_id)
 
@@ -90,6 +93,7 @@ SELECT * FROM transformed_data.fact_reviews LIMIT 10;
 - 💳 Preferred Payment Methods → Pie Chart (payment_method, SUM(final_price))
 
 3️⃣ Product & Reviews Dashboard
+
 📌 KPIs:
 - Total Products Sold → COUNT(fact_ecomm_sales.product_key)
 - Average Product Rating → AVG(fact_reviews.score)
