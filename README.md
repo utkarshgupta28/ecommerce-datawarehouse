@@ -5,7 +5,6 @@ This project implements a Kimball-style Data Warehouse for an E-commerce Platfor
 
 📂 Database Structure
 The database consists of two schemas:
-
 raw_data → Contains staging tables for raw input data.
 transformed_data → Stores cleaned and structured data for analytics.
 
@@ -49,3 +48,4 @@ Run the provided SQL scripts to create schemas, tables, and load data.
 
 📜 ERD (Entity Relationship Diagram)
 
+![alt text](image.png)
