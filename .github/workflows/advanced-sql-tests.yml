@@ -1,0 +1,30 @@
+name: Advanced SQL contract tests
+
+on:
+  pull_request:
+    paths:
+      - "sql/advanced/**"
+      - "tests/test_advanced_sql.py"
+      - ".github/workflows/advanced-sql-tests.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "sql/advanced/**"
+      - "tests/test_advanced_sql.py"
+
+jobs:
+  contract-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate advanced SQL package
+        run: python -m unittest tests/test_advanced_sql.py -v
+

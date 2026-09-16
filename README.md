@@ -114,3 +114,16 @@ Run the provided SQL scripts to create schemas, tables, and load data.
 📜 ERD (Entity Relationship Diagram)
 
 ![alt text](IMAGES/ERD.png)
+
+## Advanced SQL reporting automation
+
+The repository now includes a production-style Snowflake reporting layer designed for Power BI:
+
+- Three reusable reporting views with CTEs, window functions, ranking, customer segmentation, and fanout-safe aggregations
+- An incremental `MERGE` stored procedure with validation, audit logging, row-count capture, query IDs, and failure handling
+- Referential-integrity, required-field, negative-value, and duplicate checks
+- A cold-cache baseline-versus-mart benchmark that records elapsed time and bytes scanned from Snowflake query history
+- Dependency-free contract tests enforced by GitHub Actions
+
+See [Advanced SQL reporting layer](docs/ADVANCED_SQL.md) for deployment, validation, and benchmarking instructions.
+
